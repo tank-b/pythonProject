@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Si une session est actuellement en cours
+(donc si l'heure actuelle est comprise entre l'heure d'ouverture et l'heure de fermeture d'une session)
+alors on affiche le message : "Une session est actuellement en cours."
+Sinon on affiche : "Il n'y a pas de session en cours"
+
+On propose également d'ouvrir une prochaine session en choisisssant une heure d'ouverture et de fermeture.
+ -->
+<p>Bienvenue ! </p>
+<p>Créer une session : </p>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Créer une nouvelle session </button>
+</form>
+
+<p>Session en cours : </p>
+
+  <p>La dernière session s'est terminée le {{ last_session.closing_time }}</p>  
+
+</body>
+</html>

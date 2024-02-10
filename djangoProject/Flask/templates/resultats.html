@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bienvenue</title>
+</head>
+<body>
+    <p>Bienvenue, {{ login }}, le mot de passe associé à votre login en BD est {{ real_password }}</p>
+    <p>Celui que vous avez tapé est {{ password }}, ce qui hashé donne {{ typed_password }}</p>
+    <p> Le sel associé est {{ salt }}</p>
+</body>
+</html>

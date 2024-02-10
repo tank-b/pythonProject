@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e7c82933-388e-439d-9f08-525e7a2ff8fb" name="Changes" comment="Premier commit">
-      <change afterPath="$PROJECT_DIR$/djangoProject/Flask/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoProject/Flask/insert_users.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoProject/Flask/modele_debut.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoProject/Flask/modele_main.py" afterDir="false" />
+    <list default="true" id="e7c82933-388e-439d-9f08-525e7a2ff8fb" name="Changes" comment="intégration des étudiants + mdp hashé dans la BD">
+      <change afterPath="$PROJECT_DIR$/djangoProject/Flask/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djangoProject/Flask/templates/refus_acces.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djangoProject/Flask/templates/resultats.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangoProject/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoProject/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoProject/Flask/modele_debut.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoProject/Flask/modele_main.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -44,32 +44,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Django Server.djangoProject.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.modele_main.executor": "Run",
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "django.template.preview.state": "SHOW_EDITOR_AND_PREVIEW",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Django Server.djangoProject.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.modele_main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR_AND_PREVIEW&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/annec/PycharmProjects/djangoProject/djangoProject&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\annec\PycharmProjects\djangoProject\djangoProject" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\annec\PycharmProjects\djangoProject\djangoProject\Flask\templates" />
       <recent name="C:\Users\annec\PycharmProjects\djangoProject\djangoProject\Flask" />
+      <recent name="C:\Users\annec\PycharmProjects\djangoProject\templates" />
       <recent name="C:\Users\annec\PycharmProjects\djangoProject\djangoProject" />
       <recent name="C:\Users\annec\PycharmProjects\flaskProject1" />
-      <recent name="C:\Users\annec\PycharmProjects\djangoProject\djangoProject\Flask\templates" />
-      <recent name="C:\Users\annec\PycharmProjects\djangoProject\templates" />
     </key>
   </component>
   <component name="RunManager">
@@ -117,7 +121,9 @@
       <workItem from="1707046622102" duration="13785000" />
       <workItem from="1707085103766" duration="8000" />
       <workItem from="1707153927828" duration="16709000" />
-      <workItem from="1707332063591" duration="13960000" />
+      <workItem from="1707332063591" duration="14088000" />
+      <workItem from="1707512239866" duration="6265000" />
+      <workItem from="1707555545366" duration="7391000" />
     </task>
     <task id="LOCAL-00001" summary="Premier commit">
       <option name="closed" value="true" />
@@ -127,7 +133,23 @@
       <option name="project" value="LOCAL" />
       <updated>1707343859183</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="intégration des étudiants + mdp hashé dans la BD">
+      <option name="closed" value="true" />
+      <created>1707347155927</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1707347155927</updated>
+    </task>
+    <task id="LOCAL-00003" summary="intégration des étudiants + mdp hashé dans la BD">
+      <option name="closed" value="true" />
+      <created>1707347172997</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1707347172997</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,7 +180,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Premier commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Premier commit" />
+    <MESSAGE value="intégration des étudiants + mdp hashé dans la BD" />
+    <option name="LAST_COMMIT_MESSAGE" value="intégration des étudiants + mdp hashé dans la BD" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/djangoProject$modele_main.coverage" NAME="modele_main Coverage Results" MODIFIED="1707338490822" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../flaskProject" />
